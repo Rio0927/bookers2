@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!--header menu -->
+    <%= render 'layouts/header' %>
+    
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
+    <%= yield %>
+
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto">
+          <footer>
+            <p>CopyRight Infratop.inc</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

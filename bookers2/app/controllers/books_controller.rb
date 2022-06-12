@@ -18,6 +18,7 @@ before_action :authenticate_user!
       @book1=Book.new
       @book=Book.find(params[:id])
       @user=@book.user
+      @book_comment = BookComment.new
    end
 
    def destroy

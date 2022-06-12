@@ -7,12 +7,13 @@
     <%= csp_meta_tag %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/2bd6ef42d2.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <!--header menu -->
     <%= render 'layouts/header' %>
-    
+
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
